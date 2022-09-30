@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas - Curso em vídeo</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <div id="cabecalho">
+        <h1>Caderno de estudos</h1>
+        <h2 id="subtitulo">Anotações do curso de JavaScript ministrado através canal Curso em Vídeo</h2>
+     </div>
+
+
+
+    <div class="aula">
+        <h2>Anotações iniciais</h2>
+        <div class="conteudo-anotacoes">
+            <p>var – é a mais comum, sendo que ela muda ao longo do código.</p>
+            <p>let – muda ao longo do código e permite que sejam criadas outras variáveis com o mesmo nome, sendo um na área global e outras dentro de escopos.</p>
+            <p>const – não muda ao longo do código. Pode haver uma let para área global e outra para os escopos</p>
+            <p><br>Objetos:<br><br>
+                var  obj = {
+                nome: “Lucas”,
+                idade: 32,
+                profissao: “Programador”,
+                }; <br><br>
+                Para acessar esses dados:<br>
+obj.nome / obj.idade / obj.profissao<br><br>
+                </p>
+            <p>Arrays (listas):<br><br>
+
+                var arr = [2, 3, 4, 5];<br>
+                Para acessar esses dados (acessa pelo índice):
+                arr[0];<br><br>
+                </p>
+            <p>Operadores:<br><br>
+
+                == igual<br>
+                != diferente<br>
+                === mesmo valor e tipo de dado<br>
+                !== valor e tipo de dado diferentes<br>
+                </p>
+                <p>Operadores lógicos:<br><br>
+
+                    && - and<br>
+                    || - or<br>
+                    ! – not<br>
+                    </p>
+                    <p>Estruturas de repetição:<br><br><br>
+
+
+                        While (enquanto): <br><br>
+                        
+                        while(condição) { <br>
+                        bloco a ser executado <br>
+                        } <br><br>
+                        For: <br><br>
+
+                        for (variável; condição; incremento) {<br>
+                        bloco a ser executado <br>
+                        };
+                        </p>
+                        <br>
+
+            </div>
+        </div>
+
+    <div class="aula">
+        <h2>Formatando strings</h2>
+        <div class="conteudo">
+            <p>.length - quantidade de caracteres da string</p>
+            <input type="text" name="" id="length">
+            <input id="botao" type="button" value="Ok" onclick="funcaoLength()">
+            <div class="resultado" id="resultado-length">
+            </div>
+        </div>
+
+
+        <div class="conteudo">
+            <p>.toUpperCase() - tudo para letras maiúsculas</p>
+            <input type="text" name="" id="toUpperCase">
+            <input id="botao" type="button" value="Ok" onclick="funcaoToUpperCase()">
+            <div class="resultado" id="resultado-toUpperCase">
+            </div>
+        </div>
+
+        <div class="conteudo">
+            <p>.toLowerCase() - tudo para letras minúsculas</p>
+            <input type="text" name="" id="toLowerCase">
+            <input id="botao" type="button" value="Ok" onclick="funcaoToLowerCase()">
+            <div class="resultado" id="resultado-toLowerCase">
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="aula">
+        <h2>Formatando números</h2>
+        <div class="conteudo">
+            <p>.toFixed(2) - quantidade de casas decimais a ser informada dentro dos parênteses</p>
+            <input type="number" id="toFixed">
+            <input id="botao" type="button" value="Ok" onclick="funcaoToFixed()">
+            <div class="resultado" id="resultado-toFixed">                
+            </div>
+        </div>
+
+        <div class="conteudo">
+            <p>.replace(' . ', ' , ') - é possível substituir uma coisa por outra, por exemplo, um ponto por uma vírgula</p>
+            <input type="number" id="replace">
+            <input id="botao" type="button" value="Ok" onclick="funcaoReplace()">
+            <div class="resultado" id="resultado-replace">                
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="aula">
+        <h2>Operadores aritméticos</h2>
+        <div class="conteudo">
+            <p>+ Soma</p>
+            <p>- Divisão</p>
+            <p>* Multiplicação</p>
+            <p>/ Divisão</p>
+            <p>% Resto da divisão</p>
+            <p>** Potenciação</p>
+            <input type="number" id="valorUm" placeholder="Valor Um">
+            <input type="number" id="valorDois" placeholder="Valor Dois">
+            <input id="botao" type="button" value="Ok" onclick="funcaoCalcular()" >
+            <div class="resultado" id="resultado-operadores">                
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Eventos DOM</h2>
+        <div class="conteudo">
+            <div id="conteudo-interaja" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">
+            <p>Interaja</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Estrutura de condição if/else - Cálculo de velocidade (Vel. máxima 120 km/h)</h2>
+        <div class="conteudo">
+            <div id="conteudo-ifElse">
+            <p>Digite a velocidade do veículo</p>
+            <input id="ifElse" type="number">
+            <input id="botao" type="button" value="Ok" onclick="calculoIfElse()">
+            <div class="resultado" id="resultadoIfElse"></div>    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Estrutura de condição múltipla switch</h2>
+        <div class="conteudo">
+            <div id="conteudo-switch">
+            <p>Clique no botão abaixo para verificar qual dia da semana é hoje</p>
+            <input id="botao" type="button" value="Ok" onclick="calculoSwitch()">
+            <div class="resultado" id="resultadoSwitch"></div>    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Estrutura repetição - while</h2>
+        <div class="conteudo">
+            <div id="conteudo-while">
+            <p>Vamos contar! (informe o número de início menor que o final)</p>
+            <input id="whileInicio" type="number" placeholder="Início">
+            <input id="whileFim" type="number" placeholder="Fim">
+            <input id="botao" type="button" value="Ok" onclick="calculoWhile()">
+            <div class="resultado" id="resultadoWhile"></div>    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Estrutura de repetição - do while</h2>
+        <div class="conteudo">
+            <div id="conteudo-doWhile">
+            <p>Vamos contar! (informe o número de início menor que o final)</p>
+            <input id="doWhileInicio" type="number" placeholder="Início">
+            <input id="doWhileFim" type="number" placeholder="Fim">
+            <input id="botao" type="button" value="Ok" onclick="calculoDoWhile()">
+            <div class="resultado" id="resultadoDoWhile"></div>    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Estrutura de repetição - for</h2>
+        <div class="conteudo">
+            <div id="conteudo-for">
+            <p>Vamos contar! (informe o número de início menor que o final)</p>
+            <input id="forInicio" type="number" placeholder="Início">
+            <input id="forFim" type="number" placeholder="Fim">
+            <input id="botao" type="button" value="Ok" onclick="calculoFor()">
+            <div class="resultado" id="resultadoFor"></div>    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Estrutura de repetição - for (clique em OK para verificar maneiras de manusear uma array)</h2>
+        <div class="conteudo">
+            <div id="conteudo-array">
+            <p>lista = [8, 9, 5, 1, 7]</p>
+            <input id="botao" type="button" value="Ok" onclick="calculoArray()">
+            <div class="resultado" id="resultadoArray"></div>    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Outra forma de percorrer uma array utilizando for (informe o número de início menor que o final)</h2>
+        <h2>Ex.: for(var posicao in lista) { resultado.innerHTML += `${lista[posicao]} }
+        </h2>
+        <div class="conteudo">
+            <div id="conteudo-forIn">
+            <p>lista = [8, 9, 5, 1, 7]</p>
+            <input id="botao" type="button" value="Ok" onclick="calculoForIn()">
+            <div class="resultado" id="resultadoForIn"></div>    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Funcões</h2>
+        <div class="conteudo">
+            <div id="conteudo-funcoes">
+            <p>Digite um número e verifique se ele é par ou ímpar</p>
+            <input type="number" id="funcoes">
+            <input id="botao" type="button" value="Ok" onclick="calculoFuncoes()">
+            <div class="resultado" id="resultadoFuncoes"></div>    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aula">
+        <h2>Objetos</h2>
+        <div class="conteudo">
+            <div id="conteudo-objetos">
+            <p>Cálculo de IMC</p>
+            <input type="text" id="objetosNome" placeholder="Digite seu nome">
+            <input type="number" id="objetosPeso" placeholder="Digite seu peso (Kg)">
+            <input type="number" id="objetosAltura" placeholder="Digite sua altura (m)">
+            <input id="botao" type="button" value="Ok" onclick="calculoObjetos()">
+            <div class="resultado" id="resultadoObjetos"></div>    
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
